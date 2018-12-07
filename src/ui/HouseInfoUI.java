@@ -18,6 +18,7 @@ import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
@@ -30,13 +31,9 @@ import javax.swing.JTextField;
 import javax.swing.border.BevelBorder;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
-import model.BattleField;
-import model.BattleFieldFighting;
-import model.RealArmy;
-import model.Wall;
 
-import ui.PanelBattlefield;
-import ui.BattleFieldUI;
+import model.BattleField;
+import model.RealArmy;
 
 public class HouseInfoUI extends JDialog {
 
@@ -286,7 +283,6 @@ public class HouseInfoUI extends JDialog {
                     setHouseInfo();
                     BattleFieldUI ui = new BattleFieldUI();
                     ui.showWindow();
-
                 }
             }
         });

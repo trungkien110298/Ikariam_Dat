@@ -25,7 +25,8 @@ public class BattleField {
     public static enum TypeOfBattleField {
         ATTACK, DEFENCE;
     }
-
+    
+    //Số slot
     private int numberOfSlotForHI;
     private int numberOfSlotForLRF;
     private int numberOfSlotForLI;
@@ -33,6 +34,7 @@ public class BattleField {
     private int numberOfSlotForBB;
     private int numberOfSlotForGy;
 
+    // Kích thước mỗi slot
     private int spacePerSlotForHI;
     private int spacePerSlotForLRF;
     private int spacePerSlotForLI;
@@ -42,6 +44,8 @@ public class BattleField {
 
     private String attackFieldImg;
     private String defenceFieldImg;
+    	
+    //Mảng Slot cho 6 khu vực chiến đấu
     public Slot[] artillery, longRangeFighter, front, flank, airDefence, bomber;
     private ArrayList<Archer> slotArcher = new ArrayList<>();
     public RealArmy reserve;
@@ -140,13 +144,13 @@ public class BattleField {
     }
 
     public BattleField() {
-//        enemyReserve = new RealArmy();
+
         reserve = new RealArmy();
 
     }
 
     public BattleField(int level, TypeOfBattleField typeOfBattleField) {
-        levelOfHouse = level;
+        levelOfHouse = level; //Level  của nhà bị tấn công
         reserve = new RealArmy();
         this.typeOfBattleField = typeOfBattleField;
         if (level >= 1 && level <= 4) {
@@ -289,7 +293,8 @@ public class BattleField {
     public String getDefenceFieldImg() {
         return defenceFieldImg;
     }
-
+    
+//Xếp quân vào các vị trí
     public void setArtilleryClass() {
         int index = countByType(artillery, Army.Unit.Mortar);
         int slotForMortar = (int) Math.ceil((reserve.getMortar().size() * Mortar.size) / (float) this.spacePerSlotForAr);
@@ -925,26 +930,36 @@ public class BattleField {
     public void makeArtilleryAttack(BattleField enemy) {
         int i = 0, j = 0;
         ArrayList<UnitFighter> myArtillery = new ArrayList<>();
+        
+        //myArtillery lưu lại từng quân của quân ta trên từng slot thuộc loại artillery
         for (Slot slot : artillery) {
             for (UnitFighter unit : slot.getUnit()) {
                 myArtillery.add(unit);
             }
         }
+        
+        // enemyFront là quân địch ở trước mà quân ta sẽ đánh
         ArrayList<UnitFighter> enemyFront = new ArrayList<>();
         for (Slot slot : enemy.getFront()) {
             for (UnitFighter unit : slot.getUnit()) {
                 enemyFront.add(unit);
             }
         }
+        
+        //Khi mà địch chưa chết hết.
         if (!isAllDeadInArrayList(enemyFront)) {
             j = 0;
+            //
             while (i < myArtillery.size() && !isAllDeadInArrayList(enemyFront)) {
+            	
+            	//Tìm vị trí quân vẫn còn sống
                 while (enemyFront.get(j).getHitPoint() == 0) {
                     j++;
                     if (j == enemyFront.size()) {
                         j = 0;
                     }
                 }
+                //Lấy dam của quân ta
                 int dam = myArtillery.get(i).getDamage();
                 if (!(enemyFront.get(j) instanceof Wall)) {
                     dam = 80;
@@ -954,7 +969,6 @@ public class BattleField {
                         dam -= enemyFront.get(j).getArmour() + enemyFront.get(j).getHitPoint();
                         enemyFront.get(j).setHitPoint(0);
                         if (isAllDeadInArrayList(enemyFront)) {
-//                            i++;
                             break;
                         } else {
                             while (enemyFront.get(j).getHitPoint() == 0) {
@@ -974,7 +988,6 @@ public class BattleField {
                     }
                 }
                 i++;
-
             }
         }
 
@@ -999,7 +1012,6 @@ public class BattleField {
                         dam -= enemyFlank.get(j).getArmour() + enemyFlank.get(j).getHitPoint();
                         enemyFlank.get(j).setHitPoint(0);
                         if (isAllDeadInArrayList(enemyFlank)) {
-//                            i++;
                             break;
                         } else {
                             while (enemyFlank.get(j).getHitPoint() == 0) {
@@ -1810,7 +1822,7 @@ public class BattleField {
 
     }
 
-    // ....
+    // .... Kiểm tra số quân của 1 slot đã chết hết hay chưa
     
     private boolean isAllDeadInArrayList(ArrayList<UnitFighter> units) {
         for (UnitFighter unit : units) {

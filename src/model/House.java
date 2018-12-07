@@ -1,17 +1,22 @@
 package model;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.PriorityQueue;
 import java.util.Stack;
 import java.util.Timer;
 import java.util.TimerTask;
+
 import javax.swing.JOptionPane;
+
 import ui.IsLandUI;
 
 public class House {
 
     private int id;
+    private Date startDate;
+    private Date timeColossus;
     private int levelOfHouse;
     private int levelOfWall;
     private Wall wall;
@@ -40,7 +45,22 @@ public class House {
         this.id = id;
         battleFieldFighting = new BattleFieldFighting(id);
     }
-
+    
+    public void setTimeColossus(Date timeColossus){
+    	this.timeColossus=timeColossus;
+    	
+    }
+    public Date getTimeColossus() {
+        return timeColossus;
+    }
+    public void setStartDate(Date startDate){
+    	this.startDate=startDate;
+    	
+    }
+    public Date getStartDate() {
+        return startDate;
+    }
+    
     public House(int id) {
         this.id = id;
     }

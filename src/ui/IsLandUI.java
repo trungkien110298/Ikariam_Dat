@@ -23,16 +23,19 @@ import model.House;
  * @author Dat Ngo
  */
 public class IsLandUI extends JFrame{
-    JButton btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btn10, btn11, btn12, btn13, btn14, btn15, btn16, btn17, btnWaveAttack;
+    JButton btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btn10, btn11, btn12, btn13, btn14, btn15, btn16, btn17;
+    JButton btnWaveAttack, btnMenuSetting;
     JTextField txt1, txt2, txt3, txt4, txt5, txt6, txt7, txt8, txt9, txt10, txt11, txt12, txt13, txt14, txt15, txt16, txt17;
     JLabel lblIsLand;
     public static JButton currentButton;
     public static House currentHouse;
     public static JTextField currentTextField;
     public HouseInfoUI houseInfoUI;
+    public MenuSetting menuSetting;
     public static House[] house;
     public static House myHouse;
     public static BattleFieldFightingUI bffUI;
+    public static int timeSpeed = 10;
     
     public IsLandUI(String title){
         super(title);
@@ -49,6 +52,8 @@ public class IsLandUI extends JFrame{
         }
             
         houseInfoUI = new HouseInfoUI();
+        //
+        menuSetting = new MenuSetting();
         addControls();
         addEvents();
     }
@@ -59,6 +64,12 @@ public class IsLandUI extends JFrame{
         JPanel pnMain = new JPanel();
         pnMain.setLayout(null);
         con.add(pnMain);
+        
+        // Tạo MenuSetting
+        
+        btnMenuSetting = new MyJButtonMenuSetting();
+        btnMenuSetting.setBounds(930, 570, 60, 60);
+        pnMain.add(btnMenuSetting);
         
         // Tạo UI 17 vị trí để đặt nhà
         
@@ -256,6 +267,13 @@ public class IsLandUI extends JFrame{
             public void actionPerformed(ActionEvent e) {
                 if(myHouse!=null)
                     new WaveAttackUI("WaveAttack", myHouse.getSentRealArmy(), myHouse.getSendingArmy()).setVisible(true);
+            }
+        });
+        
+        btnMenuSetting.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                menuSetting.showWindow();
             }
         });
         

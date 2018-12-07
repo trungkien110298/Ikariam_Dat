@@ -13,6 +13,8 @@ import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+//import java.sql.Date;
+
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
@@ -29,6 +31,17 @@ import model.BattleField;
 import model.BattleFieldFighting;
 import model.RealArmy;
 import model.Wall;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import model.House;
+
+import java.util.concurrent.TimeUnit;
+import java.util.*;
+import java.text.*;
+
+
 /**
 *
 * @author QuangLinh
@@ -38,10 +51,15 @@ public class ForgeUI extends JDialog {
 	 JLabel lblImgTitle, lblTitle, lblAttackArmy,lblDefenseArmy;
 	 JComboBox<String> forgeLevelAttack,forgeLevelDefense;
 	 JButton btnDispose, btnOK;
+	 long d1,d2;
+	
+	
 
 	 public ForgeUI() {
-	      addControls();
+		 
+		 addControls();
 	      addEvents();
+	      
 	    }
 	 public void addControls(){
 		 Container con = getContentPane();
@@ -117,20 +135,72 @@ public class ForgeUI extends JDialog {
 	                dispose();
 	            }
 	        });
-		  btnOK.addActionListener(new ActionListener() {
-
+		
+		 btnOK.addActionListener(new ActionListener() {
+			//  Integer.parseInt(txtLevelHouse.getText())
+			 
 	            @Override
 	            public void actionPerformed(ActionEvent e) {
-	                setArmyDame();
+	             Date startDate1;
+		          startDate1=null;
+		       	  if ( IsLandUI.currentHouse.getStartDate()==null){
+		       		  String startDateString = "18/01/2018";
+		       		  DateFormat df = new SimpleDateFormat("MM/dd/yyyy"); 
+	       	     
+		       		  try {
+		       			  startDate1 = df.parse(startDateString);
+		       			  String newDateString = df.format(startDate1); 
+		       		  } catch (ParseException e1) {
+		       			  e1.printStackTrace();
+		       		  }
+	       	   
+		       		  if (forgeLevelAttack.getSelectedIndex()!=0)
+		       			  JOptionPane.showMessageDialog(null, "Quân tấn công đã kích hoạt lò lever "+ forgeLevelAttack.getSelectedIndex());	
+		       		  if (forgeLevelDefense.getSelectedIndex()!=0)
+		       			  JOptionPane.showMessageDialog(null, "Quân phòng thủ đã kích hoạt lò lever "+ forgeLevelDefense.getSelectedIndex());
+	   			  
+		       		  java.util.Date dateNew=new java.util.Date();
+		              IsLandUI.currentHouse.setStartDate(dateNew);
+		              getInstance().dispose();
+	       	      } else {
+	       	    	  	java.util.Date dateNew=new java.util.Date();  
+	       	    	  	long getDiff = dateNew.getTime() - IsLandUI.currentHouse.getStartDate().getTime();
+	       	    	  	
+	       	    	  	if (getDiff<(7*60*1000))  
+	       	    	  		{ long tg=7*60*1000-getDiff;
+	       	    	  		JOptionPane.showMessageDialog(null, "Sau "+tg/1000+" giây mới có thể kích lò lần tiếp theo" );
+	       	    	  		}	       	    	  	
+	       	    	  	else {
+	       	    	 
+	       	    	 
+	       	    	  		if (forgeLevelAttack.getSelectedIndex()!=0){
+	       	    	  			JOptionPane.showMessageDialog(null, "Quân tấn công  đã kích hoạt lò lever "+ forgeLevelAttack.getSelectedIndex());
+	       	    	  			}	
+	       	    	  		if (forgeLevelDefense.getSelectedIndex()!=0){
+	       	    	  			JOptionPane.showMessageDialog(null, "Quân phòng thủ đã kích hoạt lò lever "+ forgeLevelDefense.getSelectedIndex());
+	       	    	  			}
+	       	    	  		java.util.Date dateNew1=new java.util.Date();  	
+	       	    	  		IsLandUI.currentHouse.setStartDate(dateNew1);
+	            	
+	            	 
+	            	 
+	            	  }
+	           
+	            	getInstance().dispose();
+	         	      }
+	               
 	            }
 	        });
 	 }
 	 protected void setArmyDame() {
 		// Integer.parseInt(forgeLevelAttack.getText());
-		 String type = forgeLevelAttack.getSelectedItem().toString();
-		this.dispose();
+		// String type = forgeLevelAttack.getSelectedItem().toString();
+		  
+		 this.dispose();
 	 }
-	 
+	 private ForgeUI getInstance() {
+	        return this;
+	    }
 	 public void showWindow() {
 	        this.setSize(600,300);
 	        setUndecorated(true);

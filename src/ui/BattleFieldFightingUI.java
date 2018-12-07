@@ -9,12 +9,16 @@ import java.awt.Color;
 import java.awt.Container;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Date;
+
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
+import javax.swing.JTextField;
+
 import static javax.swing.WindowConstants.DISPOSE_ON_CLOSE;
 import model.BattleFieldFighting;
 
@@ -28,7 +32,8 @@ public class BattleFieldFightingUI extends JDialog{
     
     JPanel pnMain, pnTitle, pnButton, pnContent;
     JLabel lblImg, lblTitle, lblImgTitle;
-    JButton btnDispose, btnForge;
+    //JTextField forgeAttack;
+    JButton btnDispose,btnForge,btnColossus;
     PnBattleFieldFighting pnAttack, pnDefence;
     BattleFieldFighting battleFieldFighting; 
     
@@ -58,23 +63,24 @@ public class BattleFieldFightingUI extends JDialog{
         btnDispose = new JButton(new ImageIcon(getClass().getResource("/Image/xButton.PNG")));
         btnDispose.setBounds(960, 0, 20, 20);
         pnTitle.add(btnDispose);
-        
-        
-        //Forge 
-        
+        //forge
         btnForge= new JButton();
         btnForge.setBounds(800,0,60,60);
         btnForge.setIcon(new ImageIcon(getClass().getResource("/Image/forge.PNG")));
         con.add(btnForge);
+       //Colossus
+        btnColossus= new JButton();
+        btnColossus.setBounds(730,0,60,60);
+        btnColossus.setIcon(new ImageIcon(getClass().getResource("/Image/colossus.PNG")));
+        con.add(btnColossus);
         
-       ///
         
-       
         pnMain = new JPanel();
         pnMain.setLayout(null);
         pnMain.setBounds(0, 50, 980, 480);
         pnMain.setBackground(new Color(253, 247, 221));
         con.add(pnMain);
+       
         
         pnAttack = new PnBattleFieldFighting(battleFieldFighting.getAttackBattleField());
         pnDefence = new PnBattleFieldFighting(battleFieldFighting.getDefenceBattleField());
@@ -91,21 +97,26 @@ public class BattleFieldFightingUI extends JDialog{
     public void addEvents() {
 
 //         for(Army.Unit unit: Army.Unit.values()){
-       
     	 // Bảng foger 
     	btnForge.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-              
+            
                 ForgeUI forge = new ForgeUI();
+              //  forgeAttack
                 forge.showWindow();
             }
         });
-    	
-    	////
-    	
-    	
-    	
+    	//Bảng Colossus
+    	btnColossus.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+              
+                ColossusUI colossus = new ColossusUI();
+                colossus.showWindow();
+            }
+        });
+        
         btnDispose.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -133,23 +144,38 @@ public class BattleFieldFightingUI extends JDialog{
     }
     
     public void resetBattleFieldFightingUI(BattleFieldFighting battleFieldFighting){
-    	pnMain.removeAll();
-    	this.battleFieldFighting = battleFieldFighting;
-    	pnAttack = new PnBattleFieldFighting(battleFieldFighting.getAttackBattleField());
-    	pnDefence = new PnBattleFieldFighting(battleFieldFighting.getDefenceBattleField());
-    	pnAttack.setBounds(10, 50, 946, 179);
-    	pnDefence.setBounds(10, 235, 946, 179);
-    	pnAttack.addToReserves();
-       	pnDefence.addToReserves();
-       	pnMain.add(pnAttack);
-       	pnMain.add(pnDefence);
-       	pnMain.updateUI();
+        pnMain.removeAll();
+       this.battleFieldFighting = battleFieldFighting;
+       pnAttack = new PnBattleFieldFighting(battleFieldFighting.getAttackBattleField());
+       pnDefence = new PnBattleFieldFighting(battleFieldFighting.getDefenceBattleField());
+        pnAttack.setBounds(10, 50, 946, 179);
+        pnDefence.setBounds(10, 235, 946, 179);
+      pnAttack.addToReserves();
+        pnDefence.addToReserves();
+        pnMain.add(pnAttack);
+        pnMain.add(pnDefence);
+        pnMain.updateUI();
     }
     
 }
      
 
-
- //Show the HouseInfoUI dialog
+//
+//      private void addToReserves() {
+//        reservePanel.removeAll();
+//        int i = 0;
+//        PnSlotReserve[] pnslotReserve = new PnSlotReserve[12];
+//        for (Army.Unit unit : Army.Unit.values()) {
+//            
+//            pnslotReserve[unit.ordinal()] = new PnSlotReserve(battleField, unit);
+//            if(pnslotReserve[unit.ordinal()].battleField.reserve.getUnit(unit).size() == 0) continue;
+//            pnslotReserve[unit.ordinal()].setBounds(52 * i, 10, 50, 45);
+//            reservePanel.add(pnslotReserve[unit.ordinal()]);
+//            pnslotReserve[unit.ordinal()].updates();
+//            i++;
+//        }
+//
+//    }
+    //Show the HouseInfoUI dialog
     
 
