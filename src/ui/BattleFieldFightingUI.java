@@ -91,7 +91,7 @@ public class BattleFieldFightingUI extends JDialog{
         pnMain.add(pnAttack);
         pnMain.add(pnDefence);
         
-        //    lblImageField.setIcon(new javax.swing.ImageIcon(getClass().getResource(battleField.getImage())));
+      
     }
     
     public void addEvents() {
