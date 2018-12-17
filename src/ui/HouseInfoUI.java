@@ -373,14 +373,14 @@ public class HouseInfoUI extends JDialog {
         String type = cbo.getSelectedItem().toString();
         if (type.equals("My House")) {
             IsLandUI.currentHouse.setTypeOfHouse(0);
-            setIconHouse();
+            setIconMyHouse();
             IsLandUI.myHouse = IsLandUI.currentHouse;
         } else if (type.equals("My Ally")) {
             IsLandUI.currentHouse.setTypeOfHouse(1);
             setIconHouse();
         } else if (type.equals("Enemy")) {
             IsLandUI.currentHouse.setTypeOfHouse(2);
-            setIconHouse();
+            setIconEnemyHouse();
         } else {
             IsLandUI.currentHouse.setTypeOfHouse(3);
             IsLandUI.currentButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/flag.PNG")));
@@ -415,6 +415,60 @@ public class HouseInfoUI extends JDialog {
         }
         if (IsLandUI.currentHouse.getLevelOfHouse() >= 18) {
             IsLandUI.currentButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/House/houseLv18+.PNG")));
+        }
+    }
+    
+    private void setIconMyHouse() {
+        if (IsLandUI.currentHouse.getLevelOfHouse() == 1) {
+            IsLandUI.currentButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/House/Myhouse/houseLv1.PNG")));
+        }
+        if (IsLandUI.currentHouse.getLevelOfHouse() >= 2 && IsLandUI.currentHouse.getLevelOfHouse() <= 3) {
+            IsLandUI.currentButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/House/Myhouse/houseLv2.PNG")));
+        }
+        if (IsLandUI.currentHouse.getLevelOfHouse() >= 4 && IsLandUI.currentHouse.getLevelOfHouse() <= 6) {
+            IsLandUI.currentButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/House/Myhouse/houseLv4.PNG")));
+        }
+        if (IsLandUI.currentHouse.getLevelOfHouse() >= 7 && IsLandUI.currentHouse.getLevelOfHouse() <= 9) {
+            IsLandUI.currentButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/House/Myhouse/houseLv7.PNG")));
+        }
+        if (IsLandUI.currentHouse.getLevelOfHouse() >= 10 && IsLandUI.currentHouse.getLevelOfHouse() <= 12) {
+            IsLandUI.currentButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/House/Myhouse/houseLv10.PNG")));
+        }
+        if (IsLandUI.currentHouse.getLevelOfHouse() >= 13 && IsLandUI.currentHouse.getLevelOfHouse() <= 15) {
+            IsLandUI.currentButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/House/Myhouse/houseLv13.PNG")));
+        }
+        if (IsLandUI.currentHouse.getLevelOfHouse() == 16 || IsLandUI.currentHouse.getLevelOfHouse() == 17) {
+            IsLandUI.currentButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/House/Myhouse/houseLv16.PNG")));
+        }
+        if (IsLandUI.currentHouse.getLevelOfHouse() >= 18) {
+            IsLandUI.currentButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/House/Myhouse/houseLv18+.PNG")));
+        }
+    }
+    
+    private void setIconEnemyHouse() {
+        if (IsLandUI.currentHouse.getLevelOfHouse() == 1) {
+            IsLandUI.currentButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/House/Enemy/houseLv1.PNG")));
+        }
+        if (IsLandUI.currentHouse.getLevelOfHouse() >= 2 && IsLandUI.currentHouse.getLevelOfHouse() <= 3) {
+            IsLandUI.currentButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/House/Enemy/houseLv2.PNG")));
+        }
+        if (IsLandUI.currentHouse.getLevelOfHouse() >= 4 && IsLandUI.currentHouse.getLevelOfHouse() <= 6) {
+            IsLandUI.currentButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/House/Enemy/houseLv4.PNG")));
+        }
+        if (IsLandUI.currentHouse.getLevelOfHouse() >= 7 && IsLandUI.currentHouse.getLevelOfHouse() <= 9) {
+            IsLandUI.currentButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/House/Enemy/houseLv7.PNG")));
+        }
+        if (IsLandUI.currentHouse.getLevelOfHouse() >= 10 && IsLandUI.currentHouse.getLevelOfHouse() <= 12) {
+            IsLandUI.currentButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/House/Enemy/houseLv10.PNG")));
+        }
+        if (IsLandUI.currentHouse.getLevelOfHouse() >= 13 && IsLandUI.currentHouse.getLevelOfHouse() <= 15) {
+            IsLandUI.currentButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/House/Enemy/houseLv13.PNG")));
+        }
+        if (IsLandUI.currentHouse.getLevelOfHouse() == 16 || IsLandUI.currentHouse.getLevelOfHouse() == 17) {
+            IsLandUI.currentButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/House/Enemy/houseLv16.PNG")));
+        }
+        if (IsLandUI.currentHouse.getLevelOfHouse() >= 18) {
+            IsLandUI.currentButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/House/Enemy/houseLv18.PNG")));
         }
     }
 
