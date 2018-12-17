@@ -160,22 +160,7 @@ public class BattleFieldFightingUI extends JDialog{
 }
      
 
-//
-//      private void addToReserves() {
-//        reservePanel.removeAll();
-//        int i = 0;
-//        PnSlotReserve[] pnslotReserve = new PnSlotReserve[12];
-//        for (Army.Unit unit : Army.Unit.values()) {
-//            
-//            pnslotReserve[unit.ordinal()] = new PnSlotReserve(battleField, unit);
-//            if(pnslotReserve[unit.ordinal()].battleField.reserve.getUnit(unit).size() == 0) continue;
-//            pnslotReserve[unit.ordinal()].setBounds(52 * i, 10, 50, 45);
-//            reservePanel.add(pnslotReserve[unit.ordinal()]);
-//            pnslotReserve[unit.ordinal()].updates();
-//            i++;
-//        }
-//
-//    }
+
     //Show the HouseInfoUI dialog
     
 
