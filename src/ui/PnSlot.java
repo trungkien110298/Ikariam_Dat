@@ -16,9 +16,6 @@ import model.Army;
 import model.Slot;
 import model.BattleField;
 
-/// Test thử tính năng của git
-// Commit xem sao
-
 public class PnSlot extends JPanel {
 	Army.ClassUnit classUnit;
 	BattleField battleField;
