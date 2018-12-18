@@ -10,6 +10,7 @@ import ui.IsLandUI;
  *
  * @author Dat Ngo
  */
+//Test link 22p
 public class IkariamTest {
     public static void main(String[] args) {
           IsLandUI isLandUI = new IsLandUI("Ikariam");
