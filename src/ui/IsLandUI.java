@@ -68,185 +68,202 @@ public class IsLandUI extends JFrame{
         // Tạo MenuSetting
         
         btnMenuSetting = new MyJButtonMenuSetting();
-        btnMenuSetting.setBounds(930, 570, 60, 60);
+        btnMenuSetting.setBounds(0, 0, 60, 60);
         pnMain.add(btnMenuSetting);
         
         // Tạo UI 17 vị trí để đặt nhà
         
         btn1 = new MyJButtonFlag();
-        btn1.setBounds(175, 225, 30, 30);
+        btn1.setBounds(175, 150, 30, 30);
         txt1 = new JTextField();
-        txt1.setBounds(165, 255, 50, 12);
+        txt1.setBounds(165, 180, 50, 12);
         txt1.setFont(new Font(Font.SERIF, Font.BOLD, 10));
-        txt1.setEditable(false);
+        txt1.setEditable(true);
         txt1.setVisible(false);
+        txt1.setText(house[1].getName());
         pnMain.add(btn1);
         pnMain.add(txt1);
         
         btn2 = new MyJButtonFlag();
-        btn2.setBounds(270, 235, 30 ,30);
+        btn2.setBounds(360, 120, 30 ,30);
         txt2 = new JTextField();
-        txt2.setBounds(260, 265, 50, 12);
+        txt2.setBounds(350, 150, 50, 12);
         txt2.setFont(new Font(Font.SERIF, Font.BOLD, 10));
-        txt2.setEditable(false);
+        txt2.setEditable(true);
         txt2.setVisible(false);
+        txt2.setText(house[2].getName());
         pnMain.add(txt2);
         pnMain.add(btn2);
         
         btn3 = new MyJButtonFlag();
-        btn3.setBounds(370, 190, 30 ,30);
+        btn3.setBounds(500, 190, 30 ,30);
         txt3 = new JTextField();
-        txt3.setBounds(360, 220, 50, 12);
+        txt3.setBounds(490, 220, 50, 12);
         txt3.setFont(new Font(Font.SERIF, Font.BOLD, 10));
-        txt3.setEditable(false);
+        txt3.setEditable(true);
         txt3.setVisible(false);
+        txt3.setText(house[3].getName());
         pnMain.add(txt3);
         pnMain.add(btn3);
         
         btn4 = new MyJButtonFlag();
-        btn4.setBounds(470, 135, 30 ,30);
+        btn4.setBounds(820, 120, 30 ,30);
         txt4 = new JTextField();
-        txt4.setBounds(460, 165, 50, 12);
+        txt4.setBounds(810, 150, 50, 12);
         txt4.setFont(new Font(Font.SERIF, Font.BOLD, 10));
-        txt4.setEditable(false);
+        txt4.setEditable(true);
         txt4.setVisible(false);
+        txt4.setText(house[4].getName());
         pnMain.add(txt4);
         pnMain.add(btn4);
         
         btn5 = new MyJButtonFlag();
-        btn5.setBounds(770, 165, 30 ,30);
+        btn5.setBounds(910, 240, 30 ,30);
         txt5 = new JTextField();
-        txt5.setBounds(760, 195, 50, 12);
+        txt5.setBounds(900, 270, 50, 12);
         txt5.setFont(new Font(Font.SERIF, Font.BOLD, 10));
-        txt5.setEditable(false);
+        txt5.setEditable(true);
         txt5.setVisible(false);
+        txt5.setText(house[5].getName());
         pnMain.add(txt5);
         pnMain.add(btn5);
         
         btn6 = new MyJButtonFlag();
-        btn6.setBounds(650, 125, 30 ,30);
+        btn6.setBounds(1110, 260, 30 ,30);
         txt6 = new JTextField();
-        txt6.setBounds(640, 155, 50, 12);
+        txt6.setBounds(1100, 290, 50, 12);
         txt6.setFont(new Font(Font.SERIF, Font.BOLD, 10));
-        txt6.setEditable(false);
+        txt6.setEditable(true);
         txt6.setVisible(false);
+        txt6.setText(house[6].getName());
         pnMain.add(txt6);
         pnMain.add(btn6);
         
         btn7 = new MyJButtonFlag();
-        btn7.setBounds(145, 300, 30 ,30);
+        btn7.setBounds(1220, 350, 30 ,30);
         txt7 = new JTextField();
-        txt7.setBounds(135, 330, 50, 12);
+        txt7.setBounds(1210, 380, 50, 12);
         txt7.setFont(new Font(Font.SERIF, Font.BOLD, 10));
-        txt7.setEditable(false);
+        txt7.setEditable(true);
         txt7.setVisible(false);
+        txt7.setText(house[7].getName());
         pnMain.add(txt7);
         pnMain.add(btn7);
         
         btn8 = new MyJButtonFlag();
-        btn8.setBounds(125, 450, 30 ,30);
+        btn8.setBounds(1200, 475, 30 ,30);
         txt8 = new JTextField();
-        txt8.setBounds(115, 480, 50, 12);
+        txt8.setBounds(1190, 505, 50, 12);
         txt8.setFont(new Font(Font.SERIF, Font.BOLD, 10));
-        txt8.setEditable(false);
+        txt8.setEditable(true);
         txt8.setVisible(false);
+        txt8.setText(house[8].getName());
         pnMain.add(txt8);
         pnMain.add(btn8);
         
         btn9 = new MyJButtonFlag();
-        btn9.setBounds(345, 455, 30 ,30);
+        btn9.setBounds(1070, 550, 30 ,30);
         txt9 = new JTextField();
-        txt9.setBounds(335, 485, 50, 12);
+        txt9.setBounds(1060, 580, 50, 12);
         txt9.setFont(new Font(Font.SERIF, Font.BOLD, 10));
-        txt9.setEditable(false);
+        txt9.setEditable(true);
         txt9.setVisible(false);
+        txt9.setText(house[9].getName());
         pnMain.add(txt9);
         pnMain.add(btn9);
         
         btn10 = new MyJButtonFlag();
-        btn10.setBounds(240, 480, 30 ,30);
+        btn10.setBounds(910, 590, 30 ,30);
         txt10 = new JTextField();
-        txt10.setBounds(230, 510, 50, 12);
+        txt10.setBounds(900, 620, 50, 12);
         txt10.setFont(new Font(Font.SERIF, Font.BOLD, 10));
-        txt10.setEditable(false);
+        txt10.setEditable(true);
         txt10.setVisible(false);
+        txt10.setText(house[10].getName());
         pnMain.add(txt10);
         pnMain.add(btn10);
         
         btn11 = new MyJButtonFlag();
-        btn11.setBounds(370, 550, 30 ,30);
+        btn11.setBounds(740, 670, 30 ,30);
         txt11 = new JTextField();
-        txt11.setBounds(360, 580, 50, 12);
+        txt11.setBounds(730, 700, 50, 12);
         txt11.setFont(new Font(Font.SERIF, Font.BOLD, 10));
-        txt11.setEditable(false);
+        txt11.setEditable(true);
         txt11.setVisible(false);
+        txt11.setText(house[11].getName());
         pnMain.add(txt11);
         pnMain.add(btn11);
         
         btn12 = new MyJButtonFlag();
-        btn12.setBounds(585, 530, 30 ,30);
+        btn12.setBounds(550, 600, 30 ,30);
         txt12 = new JTextField();
-        txt12.setBounds(575, 560, 50, 12);
+        txt12.setBounds(540, 630, 50, 12);
         txt12.setFont(new Font(Font.SERIF, Font.BOLD, 10));
-        txt12.setEditable(false);
+        txt12.setEditable(true);
         txt12.setVisible(false);
+        txt12.setText(house[12].getName());
         pnMain.add(txt12);
         pnMain.add(btn12);
         
         btn13 = new MyJButtonFlag();
-        btn13.setBounds(700, 475, 30 ,30);
+        btn13.setBounds(455, 490, 30 ,30);
         txt13 = new JTextField();
-        txt13.setBounds(690, 505, 50, 12);
+        txt13.setBounds(445, 520, 50, 12);
         txt13.setFont(new Font(Font.SERIF, Font.BOLD, 10));
-        txt13.setEditable(false);
+        txt13.setEditable(true);
         txt13.setVisible(false);
+        txt13.setText(house[13].getName());
         pnMain.add(txt13);
         pnMain.add(btn13);
         
         btn14 = new MyJButtonFlag();
-        btn14.setBounds(835, 450, 30 ,30);
+        btn14.setBounds(275, 550, 30 ,30);
         txt14 = new JTextField();
-        txt14.setBounds(825, 480, 50, 12);
+        txt14.setBounds(265, 580, 50, 12);
         txt14.setFont(new Font(Font.SERIF, Font.BOLD, 10));
-        txt14.setEditable(false);
+        txt14.setEditable(true);
         txt14.setVisible(false);
+        txt14.setText(house[14].getName());
         pnMain.add(txt14);
         pnMain.add(btn14);
         
         btn15 = new MyJButtonFlag();
-        btn15.setBounds(835, 370, 30 ,30);
+        btn15.setBounds(200, 450, 30 ,30);
         txt15 = new JTextField();
-        txt15.setBounds(825, 400, 50, 12);
+        txt15.setBounds(190, 480, 50, 12);
         txt15.setFont(new Font(Font.SERIF, Font.BOLD, 10));
-        txt15.setEditable(false);
+        txt15.setEditable(true);
         txt15.setVisible(false);
+        txt15.setText(house[15].getName());
         pnMain.add(txt15);
         pnMain.add(btn15);
         
         btn16 = new MyJButtonFlag();
-        btn16.setBounds(815, 275, 30 ,30);
+        btn16.setBounds(350, 335, 30 ,30);
         txt16 = new JTextField();
-        txt16.setBounds(805, 305, 50, 12);
+        txt16.setBounds(340, 365, 50, 12);
         txt16.setFont(new Font(Font.SERIF, Font.BOLD, 10));
-        txt16.setEditable(false);
+        txt16.setEditable(true);
         txt16.setVisible(false);
+        txt16.setText(house[16].getName());
         pnMain.add(txt16);
         pnMain.add(btn16);
         
         btn17 = new MyJButtonFlag();
-        btn17.setBounds(670, 280, 30 ,30);
+        btn17.setBounds(190, 260, 30 ,30);
         txt17 = new JTextField();
-        txt17.setBounds(660, 310, 50, 12);
+        txt17.setBounds(180, 390, 50, 12);
         txt17.setFont(new Font(Font.SERIF, Font.BOLD, 10));
-        txt17.setEditable(false);
+        txt17.setEditable(true);
         txt17.setVisible(false);
+        txt17.setText(house[17].getName());
         pnMain.add(txt17);
         pnMain.add(btn17);
         
         // Tạo UI xem WaveAttack
         
         btnWaveAttack = new JButton("");
-        btnWaveAttack.setBounds(775, 10, 70, 100);
+        btnWaveAttack.setBounds(1165, 10, 70, 100);
         btnWaveAttack.setOpaque(false);
         btnWaveAttack.setContentAreaFilled(false);
         btnWaveAttack.setBorder(null);
@@ -256,7 +273,7 @@ public class IsLandUI extends JFrame{
         lblIsLand = new JLabel();
         lblIsLand.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/island.jpg")));
         pnMain.add(lblIsLand);
-        lblIsLand.setBounds(0, 10, 1000, 665);
+        lblIsLand.setBounds(0, 0, 1366, 768);
         
     }
     
@@ -437,7 +454,7 @@ public class IsLandUI extends JFrame{
     }
     
     public void showWindow(){
-        setSize(1500, 665);
+        setSize(1500, 900);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         setResizable(false);
