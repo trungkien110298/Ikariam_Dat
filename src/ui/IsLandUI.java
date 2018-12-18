@@ -437,7 +437,7 @@ public class IsLandUI extends JFrame{
     }
     
     public void showWindow(){
-        setSize(1500, 665);
+        setSize(1100, 665);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         setResizable(false);
