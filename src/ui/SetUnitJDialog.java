@@ -25,6 +25,10 @@ import javax.swing.JSlider;
 import javax.swing.JTextField;
 import model.Army;
 import model.Wall;
+import model.House;
+
+
+
 
 /**
  *
@@ -48,7 +52,7 @@ public class SetUnitJDialog extends JDialog {
     }
 
     public void addControls() {
-        Container con = getContentPane();
+    	Container con = getContentPane();
         con.setLayout(null);
         lblImgTitle = new JLabel();
         lblImgTitle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/lblHouTitle.png")));
@@ -56,23 +60,25 @@ public class SetUnitJDialog extends JDialog {
         con.add(lblImgTitle);
 
         pnTitle = new JPanel(null);
-        pnTitle.setBounds(0, 30, 600, 20);
+        pnTitle.setBounds(0, 30, 650, 20);
         pnTitle.setBackground(new Color(215, 172, 116));
         con.add(pnTitle);
         lblTitle = new JLabel("House's Information");
         lblTitle.setBounds(250, 0, 125, 15);
         pnTitle.add(lblTitle);
         btnDispose = new JButton(new ImageIcon(getClass().getResource("/Image/xButton.PNG")));
-        btnDispose.setBounds(580, 0, 20, 20);
+        btnDispose.setBounds(630, 0, 20, 20);
         pnTitle.add(btnDispose);
 
         pnMain = new JPanel();
         pnMain.setLayout(null);
-        pnMain.setPreferredSize(new Dimension(600, 1050));
+        pnMain.setPreferredSize(new Dimension(650, 1050));
         pnMain.setBackground(new Color(253, 247, 221));
 
         JScrollPane scDialog = new JScrollPane(pnMain, JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
-        scDialog.setBounds(0, 50, 600, 480);
+        scDialog.getVerticalScrollBar().setUnitIncrement(20);
+        scDialog.setBounds(0, 50, 650, 700);
+       // scDialog.setMaximum(2000);
         con.add(scDialog);
 
         int d = 0; //d is the distance between 2 panel
@@ -81,15 +87,15 @@ public class SetUnitJDialog extends JDialog {
                 break;
             }
             pnSetUnit[unit.ordinal()] = new PnSetUnit(unit);
-            pnSetUnit[unit.ordinal()].setBounds(0, 30 + d, 600, 50);
+            pnSetUnit[unit.ordinal()].setBounds(0, 30 + d, 700, 50);
             pnMain.add(pnSetUnit[unit.ordinal()]);
             d += 80;
         }
 
         btnOK = new JButton("OK");
-        btnOK.setBounds(240, 1010, 110, 30);
+        btnOK.setBounds(240, 1010, 150, 30);
         btnOK.setBackground(new Color(248, 222, 164));
-        pnMain.add(btnOK);
+        pnMain.add(btnOK);    
 
     }
 
@@ -141,7 +147,7 @@ public class SetUnitJDialog extends JDialog {
 
     //Show the HouseInfoUI dialog
     public void showWindows() {
-        this.setSize(600, 530);
+        this.setSize(700, 750);
         setUndecorated(true);
         this.setBackground(new Color(0, 0, 0, 0));
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);

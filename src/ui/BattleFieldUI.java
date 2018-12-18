@@ -103,7 +103,8 @@ public class BattleFieldUI extends JDialog {
         pnMain.setBackground(new Color(253, 247, 221));
         
         JScrollPane scDialog = new JScrollPane(pnMain, JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
-        scDialog.setBounds(0, 50, 980, 480);//
+        scDialog.getVerticalScrollBar().setUnitIncrement(20);
+        scDialog.setBounds(0, 50, 980, 650);//
         con.add(scDialog);
 
         int d = 0; //d is the distance between 2 panel
@@ -223,8 +224,7 @@ public class BattleFieldUI extends JDialog {
     
     private void saveArmyAndSentedArmy() {
         SendingArmy temp = new SendingArmy();
-        temp.setStartTime(System.currentTimeMillis());
-        temp.setFinishTime(temp.getStartTime()+ temp.getArmy().getSpeedTimeForWholeRoute());
+       
         army = IsLandUI.myHouse.getArmy();
         temp.getArmy().setArmourUpgrade(army.getArmourUpgrade());
         temp.getArmy().setDamageUpgrade(army.getDamageUpgrade());
@@ -245,7 +245,8 @@ public class BattleFieldUI extends JDialog {
         IsLandUI.myHouse.setArmy(army);
 //        IsLandUI.currentHouse.addArmyToBattleField(temp.getArmy());
         IsLandUI.currentHouse.addArmyToBattleField(temp.getArmy(), temp);
-        
+        temp.setStartTime(System.currentTimeMillis());
+        temp.setFinishTime(temp.getStartTime()+ temp.getArmy().getSpeedTimeForWholeRoute());
         
     }
     
@@ -387,7 +388,7 @@ public class BattleFieldUI extends JDialog {
 
     //Show the HouseInfoUI dialog
     public void showWindow() {
-        setSize(980, 530);
+        setSize(980, 750);
         setUndecorated(true);
         setBackground(new Color(0, 0, 0, 0));
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);

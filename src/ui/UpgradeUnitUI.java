@@ -61,7 +61,8 @@ public class UpgradeUnitUI extends JDialog{
         pnMain.setBackground(new Color(253, 247, 221));
 
         JScrollPane scDialog = new JScrollPane(pnMain, JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
-        scDialog.setBounds(0, 50, 700, 520);
+        scDialog.getVerticalScrollBar().setUnitIncrement(20);
+        scDialog.setBounds(0, 50, 700, 700);
         con.add(scDialog);
 
         int d = 0; //d is the distance between 2 panel
@@ -127,7 +128,7 @@ public class UpgradeUnitUI extends JDialog{
     }
     
     public void showWindow(){
-        this.setSize(700, 570);
+        this.setSize(700, 750);
         setUndecorated(true);
         this.setBackground(new Color(0, 0, 0, 0));
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
