@@ -23,9 +23,9 @@ import test.IkariamTest;
 
 public class MenuSetting extends JDialog {
 	JSlider sldTimeSpeed;
-	JPanel pnMain, pnTitle, pnTimeSpeed, pnReset;
-	JLabel lblTitle, lblTimeSpeed, lblX, lblReset;
-	JButton btnDispose, btnOK, btnReset;
+	JPanel pnMain, pnTitle, pnTimeSpeed, pnReset, pnSave, pnReload;
+	JLabel lblTitle, lblTimeSpeed, lblX, lblReset, lblSave, lblReload;
+	JButton btnDispose, btnOK, btnReset, btnSave, btnReload;
 	JTextField txtTimeSpeed;
 
 	public MenuSetting() {
@@ -52,7 +52,7 @@ public class MenuSetting extends JDialog {
 		btnDispose.setBounds(580, 0, 20, 20);
 		pnTitle.add(btnDispose);
 
-		//Time Speed setting;
+		// Time Speed setting;
 		pnTimeSpeed = new JPanel(null);
 		pnTimeSpeed.setBounds(0, 50, 600, 50);
 		pnTimeSpeed.setBackground(new Color(251, 232, 193));
@@ -63,8 +63,7 @@ public class MenuSetting extends JDialog {
 		lblX = new JLabel("x");
 		lblX.setBounds(490, 15, 90, 20);
 		pnTimeSpeed.add(lblX);
-		
-		
+
 		sldTimeSpeed = new JSlider(1, 100);
 		sldTimeSpeed.setBounds(180, 15, 300, 20);
 		sldTimeSpeed.setBackground(new Color(251, 232, 193));
@@ -85,8 +84,33 @@ public class MenuSetting extends JDialog {
 		btnReset.setBounds(190, 10, 70, 30);
 		btnReset.setBackground(new Color(248, 222, 164));
 		pnReset.add(btnReset);
-		
-		
+
+		// Save Setting
+		pnSave = new JPanel(null);
+		pnSave.setBounds(0, 200, 600, 50);
+		pnSave.setBackground(new Color(251, 232, 193));
+		pnMain.add(pnSave);
+		lblSave = new JLabel("Save");
+		lblSave.setBounds(50, 15, 90, 20);
+		pnSave.add(lblSave);
+		btnSave = new JButton("OK");
+		btnSave.setBounds(190, 10, 70, 30);
+		btnSave.setBackground(new Color(248, 222, 164));
+		pnSave.add(btnSave);
+
+		// Reload Setting
+		pnReload = new JPanel(null);
+		pnReload.setBounds(0, 275, 600, 50);
+		pnReload.setBackground(new Color(251, 232, 193));
+		pnMain.add(pnReload);
+		lblReload = new JLabel("Reload");
+		lblReload.setBounds(50, 15, 90, 20);
+		pnReload.add(lblReload);
+		btnReload = new JButton("OK");
+		btnReload.setBounds(190, 10, 70, 30);
+		btnReload.setBackground(new Color(248, 222, 164));
+		pnReload.add(btnReload);
+
 		// Button Ok
 		btnOK = new JButton("OK");
 		btnOK.setBounds(240, 450, 110, 30);
@@ -144,11 +168,26 @@ public class MenuSetting extends JDialog {
 		btnReset.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				System.out.println("KK");
-				IkariamTest.reset();
+				IkariamTest.Reset();
 				dispose();
 			}
 		});
+		btnSave.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				IkariamTest.Save();
+				dispose();
+			}
+		});
+		
+		btnReload.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				IkariamTest.Reload();
+				dispose();
+			}
+		});
+		
 	}
 
 	public void showWindow() {
