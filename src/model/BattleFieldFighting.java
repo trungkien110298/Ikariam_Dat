@@ -71,7 +71,7 @@ public class BattleFieldFighting {
 			public void run() {
 				if (totalHitpointDefenceAfter == totalHitpointDefenceBefore) {
 					JOptionPane.showMessageDialog(null, "Enemy " + IsLandUI.house[houseID].getName() + " won");
-					sendingArmy.getTimer().cancel();
+					
 					// Trường hợp bên tấn công không thể làm bên phòng thử mất máu => Bên tấn công thua
 
 				} else {
@@ -184,7 +184,7 @@ public class BattleFieldFighting {
 						war = false;
 						IsLandUI.house[houseID].getArmy().addArmy(defenceBattleField.getReserve().toArmy());
 						JOptionPane.showMessageDialog(null, "Enemy " + IsLandUI.house[houseID].getName() + " won");
-						sendingArmy.getTimer().cancel();
+						
 					} else if (defenceBattleField.isAllDead()) {
 						war = false;
 						Timer timer = new Timer();
@@ -196,11 +196,11 @@ public class BattleFieldFighting {
 							}
 						}, attackBattleField.getReserve().toArmy().getSpeedTimeForWholeRoute());// Thời gian đưa quân về sau khi thắng
 						{JOptionPane.showMessageDialog(null, "You won " + IsLandUI.house[houseID].getName());
-						sendingArmy.getTimer().cancel();}
+						}
 					} else {
 						boolean isAllWall = defenceBattleField.isAllWall();
-						attackBattleField.addToField(isAllWall);
-						defenceBattleField.addToField(isAllWall);
+						attackBattleField.addToField(isAllWall,1);
+						defenceBattleField.addToField(isAllWall,2);
 						startAttack();
 					}
 
