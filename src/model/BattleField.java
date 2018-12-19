@@ -1833,7 +1833,15 @@ public class BattleField {
         return true;
     }
 
-    public void addToField(boolean isAllWall) {
+    public void addToField(boolean isAllWall, int add) {
+    	if((!isAllWall)&&(add==2))   ///sưa day
+		{ reserve.getGyrocopter().clear();
+		 reserve.getMortar().clear();
+		 reserve.getCatapult().clear();
+		 reserve.getRam().clear();
+		 reserve.getBB().clear();
+		
+		}
         setLongRange();
         setAirDefence();
         setArtilleryClass();
