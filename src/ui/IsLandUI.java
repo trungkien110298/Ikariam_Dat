@@ -5,6 +5,7 @@
  */
 package ui;
 
+import java.awt.Color;
 import java.awt.Container;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
@@ -12,6 +13,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
+import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -29,7 +31,8 @@ public class IsLandUI extends JFrame{
     JButton btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btn10, btn11, btn12, btn13, btn14, btn15, btn16, btn17;
     JButton btnWaveAttack, btnMenuSetting;
     JTextField txt1, txt2, txt3, txt4, txt5, txt6, txt7, txt8, txt9, txt10, txt11, txt12, txt13, txt14, txt15, txt16, txt17;
-    JLabel lblIsLand, lblIco;
+    JLabel lblIsLand, lblIco, lblIconH;
+    public static JLabel currentLabel;
     public static JButton currentButton;
     public static House currentHouse;
     public static JTextField currentTextField;
@@ -69,6 +72,7 @@ public class IsLandUI extends JFrame{
         con.add(pnMain);
         
         //Logo
+        lblIconH = new JLabel(new ImageIcon(getClass().getResource("/Image/text_field.PNG")));
         lblIco = new JLabel(new ImageIcon(getClass().getResource("/Image/ikariam-01.PNG")));
         lblIco.setBounds(550, 0, 320, 80);
         pnMain.add(lblIco);
@@ -80,7 +84,7 @@ public class IsLandUI extends JFrame{
         pnMain.add(btnMenuSetting);
         
         // Tạo UI 17 vị trí để đặt nhà
-        
+        lblIconH.setBounds(160, 190, 60, 15);
         btn1 = new MyJButtonFlag();
         btn1.setBounds(155, 120, 70, 70);
         txt1 = new JTextField();
@@ -88,11 +92,19 @@ public class IsLandUI extends JFrame{
         txt1.setFont(new Font(Font.SERIF, Font.BOLD, 12));
         txt1.setEditable(true);
         txt1.setVisible(false);
+       
+        txt1.setOpaque(false); // added by OP
+        txt1.setBorder(BorderFactory.createEmptyBorder());
+        txt1.setBackground(new Color(0,0,0,0));
+       
         txt1.setDocument(new JTextFieldLimit(20));
         txt1.setText(house[1].getName());
+        lblIconH.setVisible(false);
         checkInput(txt1);
+        
         pnMain.add(btn1);
         pnMain.add(txt1);
+        pnMain.add(lblIconH);
         
         btn2 = new MyJButtonFlag();
         btn2.setBounds(340, 95, 70, 70);
@@ -343,7 +355,9 @@ public class IsLandUI extends JFrame{
             public void actionPerformed(ActionEvent e) {
                 currentHouse = house[1];
                 currentButton = btn1;
+                currentLabel = lblIconH;
                 currentTextField = txt1;
+                
                 houseInfoUI.showWindow();
             }
         });
