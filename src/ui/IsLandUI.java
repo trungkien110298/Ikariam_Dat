@@ -62,14 +62,7 @@ public class IsLandUI extends JFrame{
     }
     
     public static void resetIsLand() {
-    	house = new House[18];
-        currentHouse = new House();
-        currentButton = new JButton();
-        for(int i=1; i<18; i++){
-            house[i] = new House();
-            house[i].setName("Ikariam"+i);
-            house[i].setId(i);
-        }
+    	
     }
     
     public void addControls(){
@@ -519,7 +512,8 @@ public class IsLandUI extends JFrame{
        	 }
 		});
     }
-	 
+	
+    
     public void showWindow(){
         setSize(1500, 900);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
