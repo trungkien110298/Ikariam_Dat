@@ -46,6 +46,7 @@ public class PnSlotReserve extends JPanel{
         txtNumberOfUnit.setFont(new Font("Arial", Font.BOLD, 10));
         txtNumberOfUnit.setBorder(null);
         txtNumberOfUnit.setEditable(false);
+        //System.out.println(txtNumberOfUnit.getText());//Test
         this.add(txtNumberOfUnit);
 
     }
