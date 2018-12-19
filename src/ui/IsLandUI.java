@@ -9,11 +9,12 @@ import java.awt.Container;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
-import static javax.swing.JFrame.EXIT_ON_CLOSE;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
@@ -87,7 +88,9 @@ public class IsLandUI extends JFrame{
         txt1.setFont(new Font(Font.SERIF, Font.BOLD, 10));
         txt1.setEditable(true);
         txt1.setVisible(false);
+        txt1.setDocument(new JTextFieldLimit(20));
         txt1.setText(house[1].getName());
+        checkInput(txt1);
         pnMain.add(btn1);
         pnMain.add(txt1);
         
@@ -98,7 +101,9 @@ public class IsLandUI extends JFrame{
         txt2.setFont(new Font(Font.SERIF, Font.BOLD, 10));
         txt2.setEditable(true);
         txt2.setVisible(false);
+        txt2.setDocument(new JTextFieldLimit(20));
         txt2.setText(house[2].getName());
+        checkInput(txt2);
         pnMain.add(txt2);
         pnMain.add(btn2);
         
@@ -109,7 +114,9 @@ public class IsLandUI extends JFrame{
         txt3.setFont(new Font(Font.SERIF, Font.BOLD, 10));
         txt3.setEditable(true);
         txt3.setVisible(false);
+        txt3.setDocument(new JTextFieldLimit(20));
         txt3.setText(house[3].getName());
+        checkInput(txt3);
         pnMain.add(txt3);
         pnMain.add(btn3);
         
@@ -120,7 +127,9 @@ public class IsLandUI extends JFrame{
         txt4.setFont(new Font(Font.SERIF, Font.BOLD, 10));
         txt4.setEditable(true);
         txt4.setVisible(false);
+        txt4.setDocument(new JTextFieldLimit(20));
         txt4.setText(house[4].getName());
+        checkInput(txt4);
         pnMain.add(txt4);
         pnMain.add(btn4);
         
@@ -131,7 +140,9 @@ public class IsLandUI extends JFrame{
         txt5.setFont(new Font(Font.SERIF, Font.BOLD, 10));
         txt5.setEditable(true);
         txt5.setVisible(false);
+        txt5.setDocument(new JTextFieldLimit(20));
         txt5.setText(house[5].getName());
+        checkInput(txt5);
         pnMain.add(txt5);
         pnMain.add(btn5);
         
@@ -142,7 +153,9 @@ public class IsLandUI extends JFrame{
         txt6.setFont(new Font(Font.SERIF, Font.BOLD, 10));
         txt6.setEditable(true);
         txt6.setVisible(false);
+        txt6.setDocument(new JTextFieldLimit(20));
         txt6.setText(house[6].getName());
+        checkInput(txt6);
         pnMain.add(txt6);
         pnMain.add(btn6);
         
@@ -153,7 +166,9 @@ public class IsLandUI extends JFrame{
         txt7.setFont(new Font(Font.SERIF, Font.BOLD, 10));
         txt7.setEditable(true);
         txt7.setVisible(false);
+        txt7.setDocument(new JTextFieldLimit(20));
         txt7.setText(house[7].getName());
+        checkInput(txt7);
         pnMain.add(txt7);
         pnMain.add(btn7);
         
@@ -164,7 +179,9 @@ public class IsLandUI extends JFrame{
         txt8.setFont(new Font(Font.SERIF, Font.BOLD, 10));
         txt8.setEditable(true);
         txt8.setVisible(false);
+        txt8.setDocument(new JTextFieldLimit(20));
         txt8.setText(house[8].getName());
+        checkInput(txt8);
         pnMain.add(txt8);
         pnMain.add(btn8);
         
@@ -175,7 +192,9 @@ public class IsLandUI extends JFrame{
         txt9.setFont(new Font(Font.SERIF, Font.BOLD, 10));
         txt9.setEditable(true);
         txt9.setVisible(false);
+        txt9.setDocument(new JTextFieldLimit(20));
         txt9.setText(house[9].getName());
+        checkInput(txt9);
         pnMain.add(txt9);
         pnMain.add(btn9);
         
@@ -186,7 +205,9 @@ public class IsLandUI extends JFrame{
         txt10.setFont(new Font(Font.SERIF, Font.BOLD, 10));
         txt10.setEditable(true);
         txt10.setVisible(false);
+        txt10.setDocument(new JTextFieldLimit(20));
         txt10.setText(house[10].getName());
+        checkInput(txt10);
         pnMain.add(txt10);
         pnMain.add(btn10);
         
@@ -197,7 +218,9 @@ public class IsLandUI extends JFrame{
         txt11.setFont(new Font(Font.SERIF, Font.BOLD, 10));
         txt11.setEditable(true);
         txt11.setVisible(false);
+        txt11.setDocument(new JTextFieldLimit(20));
         txt11.setText(house[11].getName());
+        checkInput(txt11);
         pnMain.add(txt11);
         pnMain.add(btn11);
         
@@ -208,7 +231,9 @@ public class IsLandUI extends JFrame{
         txt12.setFont(new Font(Font.SERIF, Font.BOLD, 10));
         txt12.setEditable(true);
         txt12.setVisible(false);
+        txt12.setDocument(new JTextFieldLimit(20));
         txt12.setText(house[12].getName());
+        checkInput(txt12);
         pnMain.add(txt12);
         pnMain.add(btn12);
         
@@ -219,7 +244,9 @@ public class IsLandUI extends JFrame{
         txt13.setFont(new Font(Font.SERIF, Font.BOLD, 10));
         txt13.setEditable(true);
         txt13.setVisible(false);
+        txt13.setDocument(new JTextFieldLimit(20));
         txt13.setText(house[13].getName());
+        checkInput(txt13);
         pnMain.add(txt13);
         pnMain.add(btn13);
         
@@ -231,7 +258,9 @@ public class IsLandUI extends JFrame{
         txt14.setFont(new Font(Font.SERIF, Font.BOLD, 10));
         txt14.setEditable(true);
         txt14.setVisible(false);
+        txt14.setDocument(new JTextFieldLimit(20));
         txt14.setText(house[14].getName());
+        checkInput(txt14);
         pnMain.add(txt14);
         pnMain.add(btn14);
         
@@ -242,7 +271,9 @@ public class IsLandUI extends JFrame{
         txt15.setFont(new Font(Font.SERIF, Font.BOLD, 10));
         txt15.setEditable(true);
         txt15.setVisible(false);
+        txt15.setDocument(new JTextFieldLimit(20));
         txt15.setText(house[15].getName());
+        checkInput(txt15);
         pnMain.add(txt15);
         pnMain.add(btn15);
         
@@ -253,7 +284,9 @@ public class IsLandUI extends JFrame{
         txt16.setFont(new Font(Font.SERIF, Font.BOLD, 10));
         txt16.setEditable(true);
         txt16.setVisible(false);
+        txt16.setDocument(new JTextFieldLimit(20));
         txt16.setText(house[16].getName());
+        checkInput(txt16);
         pnMain.add(txt16);
         pnMain.add(btn16);
         
@@ -264,7 +297,9 @@ public class IsLandUI extends JFrame{
         txt17.setFont(new Font(Font.SERIF, Font.BOLD, 10));
         txt17.setEditable(true);
         txt17.setVisible(false);
+        txt17.setDocument(new JTextFieldLimit(20));
         txt17.setText(house[17].getName());
+        checkInput(txt17);
         pnMain.add(txt17);
         pnMain.add(btn17);
         
@@ -460,7 +495,21 @@ public class IsLandUI extends JFrame{
             }
         });
     }
-    
+    public void checkInput(JTextField txt){
+        txt.addKeyListener(new KeyAdapter() {
+        	public void keyTyped(KeyEvent e){
+       		 char input = e.getKeyChar();
+       		 int j = Character.getNumericValue(input);
+       		// if(60<j<95)||((j>=97)&(j<122))||(j==32))
+       		 //if(((input=='\t'||input<'a'|| input >'z')&(input<'A'|| input >'Z')))
+       		if(!(Character.isAlphabetic(input) ||  (input==KeyEvent.VK_SPACE)||  input==KeyEvent.VK_DELETE ))
+       			{
+       			 e.consume();
+       		 }
+       	 }
+		});
+    }
+	 
     public void showWindow(){
         setSize(1500, 900);
         setDefaultCloseOperation(EXIT_ON_CLOSE);

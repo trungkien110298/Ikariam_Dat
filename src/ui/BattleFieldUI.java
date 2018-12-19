@@ -22,6 +22,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTabbedPane;
@@ -211,7 +212,8 @@ public class BattleFieldUI extends JDialog {
         btnRun.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                saveArmyAndSentedArmy();
+            	JOptionPane.showMessageDialog(null, "Bạn Đã Gửi Quân Đến Chiến Trường");
+            	saveArmyAndSentedArmy();
                 battleField.resetAll(battleField.getLevelOfHouse());
                 pnBattlefield.resetAll();
                 pnBattlefield.updateUI();

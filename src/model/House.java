@@ -171,7 +171,7 @@ public class House {
                     battleFieldFighting.startAttack();
                 }
                 IsLandUI.myHouse.getSendingArmy().get(id).poll();
-                JOptionPane.showMessageDialog(null, "Success");
+                JOptionPane.showMessageDialog(null, "Army đã tới chiến trường");
             }
         }, attackArmy.getSpeedTimeForWholeRoute());
     }
