@@ -63,8 +63,8 @@ public class SetUnitJDialog extends JDialog {
         pnTitle.setBounds(0, 30, 650, 20);
         pnTitle.setBackground(new Color(215, 172, 116));
         con.add(pnTitle);
-        lblTitle = new JLabel("House's Information");
-        lblTitle.setBounds(250, 0, 125, 15);
+        lblTitle = new JLabel("Barrack");
+        lblTitle.setBounds(300, 0, 125, 15);
         pnTitle.add(lblTitle);
         btnDispose = new JButton(new ImageIcon(getClass().getResource("/Image/xButton.PNG")));
         btnDispose.setBounds(630, 0, 20, 20);

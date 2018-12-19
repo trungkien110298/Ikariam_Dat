@@ -383,8 +383,13 @@ public class HouseInfoUI extends JDialog {
             IsLandUI.currentHouse.setTypeOfHouse(3);
             IsLandUI.currentButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/flag-01.PNG")));
         }
+       
+       
+        
         IsLandUI.currentTextField.setText(IsLandUI.currentHouse.getName());
         IsLandUI.currentTextField.setVisible(true);
+        IsLandUI.currentLabel.setVisible(true);
+       
         this.dispose();
 
     }

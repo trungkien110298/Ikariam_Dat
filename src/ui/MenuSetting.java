@@ -19,6 +19,8 @@ import javax.swing.JTextField;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 
+import test.IkariamTest;
+
 public class MenuSetting extends JDialog {
 	JSlider sldTimeSpeed;
 	JPanel pnMain, pnTitle, pnTimeSpeed, pnReset;
@@ -142,7 +144,8 @@ public class MenuSetting extends JDialog {
 		btnReset.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				IsLandUI.resetIsLand();
+				System.out.println("KK");
+				IkariamTest.reset();
 				dispose();
 			}
 		});
