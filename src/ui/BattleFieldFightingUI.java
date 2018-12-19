@@ -9,7 +9,6 @@ import java.awt.Color;
 import java.awt.Container;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.Date;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -17,15 +16,10 @@ import javax.swing.JDialog;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
-import javax.swing.JTextField;
 
-import static javax.swing.WindowConstants.DISPOSE_ON_CLOSE;
 import model.BattleFieldFighting;
 
-/**
- *
- * @author GBlue
- */
+
 public class BattleFieldFightingUI extends JDialog{
     
     public static JTabbedPane pnTab;

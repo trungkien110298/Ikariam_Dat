@@ -64,6 +64,10 @@ public class IsLandUI extends JFrame{
         addEvents();
     }
     
+    public static void resetIsLand() {
+    	
+    }
+    
     public void addControls(){
         Container con = getContentPane();
         
@@ -522,7 +526,8 @@ public class IsLandUI extends JFrame{
        	 }
 		});
     }
-	 
+	
+    
     public void showWindow(){
         setSize(1500, 900);
         setDefaultCloseOperation(EXIT_ON_CLOSE);

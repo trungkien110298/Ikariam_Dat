@@ -59,10 +59,10 @@ public class PnSetUnit extends JPanel{
         sld.setBackground(new Color(251,232,193));
         this.add(sld);
         txt = new JTextField(3);
-        txt.setBounds(520, 15, 30, 20);
+        txt.setBounds(520, 15, 35, 20);
         this.add(txt);
         btnSetMax = new JButton("Max");
-        btnSetMax.setBounds(555, 15, 60, 20);
+        btnSetMax.setBounds(560, 15, 60, 20);
         this.add(btnSetMax);
     }
     public void addEvents() {        
