@@ -385,9 +385,10 @@ public class HouseInfoUI extends JDialog {
         }
        
        
-        IsLandUI.currentLabel.setVisible(true);
+        
         IsLandUI.currentTextField.setText(IsLandUI.currentHouse.getName());
         IsLandUI.currentTextField.setVisible(true);
+        IsLandUI.currentLabel.setVisible(true);
        
         this.dispose();
 
