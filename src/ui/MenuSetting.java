@@ -21,9 +21,9 @@ import javax.swing.event.ChangeListener;
 
 public class MenuSetting extends JDialog {
 	JSlider sldTimeSpeed;
-	JPanel pnMain, pnTitle, pnTimeSpeed;
-	JLabel lblTitle, lblTimeSpeed, lblX;
-	JButton btnDispose, btnOK;
+	JPanel pnMain, pnTitle, pnTimeSpeed, pnReset;
+	JLabel lblTitle, lblTimeSpeed, lblX, lblReset;
+	JButton btnDispose, btnOK, btnReset;
 	JTextField txtTimeSpeed;
 
 	public MenuSetting() {
@@ -50,6 +50,7 @@ public class MenuSetting extends JDialog {
 		btnDispose.setBounds(580, 0, 20, 20);
 		pnTitle.add(btnDispose);
 
+		//Time Speed setting;
 		pnTimeSpeed = new JPanel(null);
 		pnTimeSpeed.setBounds(0, 50, 600, 50);
 		pnTimeSpeed.setBackground(new Color(251, 232, 193));
@@ -57,7 +58,6 @@ public class MenuSetting extends JDialog {
 		lblTimeSpeed = new JLabel("Time Speed");
 		lblTimeSpeed.setBounds(50, 15, 90, 20);
 		pnTimeSpeed.add(lblTimeSpeed);
-		
 		lblX = new JLabel("x");
 		lblX.setBounds(490, 15, 90, 20);
 		pnTimeSpeed.add(lblX);
@@ -71,6 +71,21 @@ public class MenuSetting extends JDialog {
 		txtTimeSpeed.setBounds(500, 15, 40, 20);
 		pnTimeSpeed.add(txtTimeSpeed);
 
+		// Reset Setting
+		pnReset = new JPanel(null);
+		pnReset.setBounds(0, 125, 600, 50);
+		pnReset.setBackground(new Color(251, 232, 193));
+		pnMain.add(pnReset);
+		lblReset = new JLabel("Reset");
+		lblReset.setBounds(50, 15, 90, 20);
+		pnReset.add(lblReset);
+		btnReset = new JButton("OK");
+		btnReset.setBounds(190, 10, 70, 30);
+		btnReset.setBackground(new Color(248, 222, 164));
+		pnReset.add(btnReset);
+		
+		
+		// Button Ok
 		btnOK = new JButton("OK");
 		btnOK.setBounds(240, 450, 110, 30);
 		btnOK.setBackground(new Color(248, 222, 164));
@@ -121,6 +136,13 @@ public class MenuSetting extends JDialog {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				IsLandUI.timeSpeed = Integer.parseInt(txtTimeSpeed.getText());
+				dispose();
+			}
+		});
+		btnReset.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				IsLandUI.resetIsLand();
 				dispose();
 			}
 		});

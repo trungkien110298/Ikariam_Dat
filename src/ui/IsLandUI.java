@@ -61,6 +61,17 @@ public class IsLandUI extends JFrame{
         addEvents();
     }
     
+    public static void resetIsLand() {
+    	house = new House[18];
+        currentHouse = new House();
+        currentButton = new JButton();
+        for(int i=1; i<18; i++){
+            house[i] = new House();
+            house[i].setName("Ikariam"+i);
+            house[i].setId(i);
+        }
+    }
+    
     public void addControls(){
         Container con = getContentPane();
         

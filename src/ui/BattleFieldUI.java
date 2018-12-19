@@ -40,16 +40,13 @@ import model.unit.Catapult;
 import model.unit.Gyrocopter;
 import model.unit.Hoplite;
 import model.unit.Mortar;
+import model.unit.Ram;
 import model.unit.Slinger;
 import model.unit.Spearman;
 import model.unit.SteamGiant;
 import model.unit.SulphurCarabineer;
 import model.unit.Swordsman;
 
-/**
- *
- * @author admin
- */
 public class BattleFieldUI extends JDialog {
    
 	PanelBattlefield pnBattlefield;
@@ -82,8 +79,8 @@ public class BattleFieldUI extends JDialog {
         con.setLayout(null);
         
         lblImgTitle = new JLabel();
-        lblImgTitle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/lblHouTitle.png")));
-        lblImgTitle.setBounds(210, 0, 60, 60);
+        lblImgTitle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Pillage_Disabled.PNG")));
+        lblImgTitle.setBounds(110, 10, 60, 60);
         con.add(lblImgTitle);
         
         pnTitle = new JPanel(null);
@@ -91,8 +88,8 @@ public class BattleFieldUI extends JDialog {
         pnTitle.setBounds(0, 30, 980, 20);
         pnTitle.setBackground(new Color(215, 172, 116));
         
-        lblTitle = new JLabel("Battle Field");
-        lblTitle.setBounds(420, 0, 125, 15);
+        lblTitle = new JLabel("Pillage");
+        lblTitle.setBounds(500, 0, 125, 15);
         pnTitle.add(lblTitle);
         btnDispose = new JButton(new ImageIcon(getClass().getResource("/Image/xButton.PNG")));
         btnDispose.setBounds(960, 0, 20, 20);
@@ -318,7 +315,7 @@ public class BattleFieldUI extends JDialog {
                 battleField.resetUnitSlot(battleField, battleField.artillery, Army.Unit.Ram);
                 pnBattlefield.updates(pnBattlefield.pnArtillery, 0);
                 for (int i = 0; i < pnSetUnitBattle[unit.ordinal()].getSld().getValue(); i++) {
-                    battleField.reserve.getArcher().push(new Archer());
+                    battleField.reserve.getRam().push(new Ram());
                 }
                 battleField.setArtilleryClass();
                 pnBattlefield.updates(pnBattlefield.pnArtillery, 0);

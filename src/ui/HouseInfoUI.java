@@ -367,9 +367,7 @@ public class HouseInfoUI extends JDialog {
             }
 
         }
-//        IsLandUI.currentHouse.setWall(wall);
-//        if(!IsLandUI.currentHouse.getBattleField().isSetBattleField())
-//            IsLandUI.currentHouse.getBattleField().resetAll(IsLandUI.currentHouse.getLevelOfHouse());
+
         String type = cbo.getSelectedItem().toString();
         if (type.equals("My House")) {
             IsLandUI.currentHouse.setTypeOfHouse(0);
