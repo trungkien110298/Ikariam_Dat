@@ -121,7 +121,7 @@ public class PnWaveAttack extends JPanel {
                             IsLandUI.myHouse.getArmy().addArmy(sendingArmy.getArmy());
                             JOptionPane.showMessageDialog(null, "Wave Success!");
                         }
-                    }, 100000);
+                    }, 10000);
                 }
             }
         });
