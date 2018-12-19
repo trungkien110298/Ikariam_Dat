@@ -166,8 +166,8 @@ public class House {
                     }
                     battleFieldFighting.getDefenceBattleField().getReserve().setWall(walls);
                     boolean isAllWall = battleFieldFighting.getDefenceBattleField().isAllWall();
-                    battleFieldFighting.getDefenceBattleField().addToField(isAllWall);
-                    battleFieldFighting.getAttackBattleField().addToField(isAllWall);
+                    battleFieldFighting.getDefenceBattleField().addToField(isAllWall,2);
+                    battleFieldFighting.getAttackBattleField().addToField(isAllWall,1);
                     battleFieldFighting.startAttack();
                 }
                 IsLandUI.myHouse.getSendingArmy().get(id).poll();

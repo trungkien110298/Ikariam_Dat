@@ -199,8 +199,8 @@ public class BattleFieldFighting {
 						}
 					} else {
 						boolean isAllWall = defenceBattleField.isAllWall();
-						attackBattleField.addToField(isAllWall);
-						defenceBattleField.addToField(isAllWall);
+						attackBattleField.addToField(isAllWall,1);
+						defenceBattleField.addToField(isAllWall,2);
 						startAttack();
 					}
 
