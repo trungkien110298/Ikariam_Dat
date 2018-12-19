@@ -119,6 +119,7 @@ public class HouseInfoUI extends JDialog {
 
         btnPillage = new JButton();
         btnPillage.setBounds(50, 290, 50, 35);
+       
         btnPillage.setIcon(new ImageIcon(getClass().getResource("/Image/Pillage_Enabled.PNG")));
         pnMain.add(btnPillage);
 
@@ -279,7 +280,8 @@ public class HouseInfoUI extends JDialog {
             public void mouseClicked(MouseEvent evt) {
                 if (IsLandUI.myHouse == null) {
                     JOptionPane.showMessageDialog(null, "Chưa có các thông số của My house");
-                } else {
+                } else 
+                if (IsLandUI.currentHouse.getTypeOfHouse() == 2) {
                     setHouseInfo();
                     BattleFieldUI ui = new BattleFieldUI();
                     ui.showWindow();
@@ -300,7 +302,7 @@ public class HouseInfoUI extends JDialog {
                 if (!IsLandUI.currentHouse.getBattleFieldFighting().isWar()) {
                     JOptionPane.showMessageDialog(null, "War haven't happened");
                 } else {
-//                    IsLandUI.bffUI = new BattleFieldFightingUI(IsLandUI.currentHouse.getBattleFieldFighting());
+
                     System.out.println("" + IsLandUI.currentHouse.getBattleFieldFighting().getAttackBattleField().reserve.getArcher().size());
                     IsLandUI.bffUI = new BattleFieldFightingUI(IsLandUI.currentHouse.getBattleFieldFighting());
                     IsLandUI.bffUI.showWindow();
@@ -389,7 +391,6 @@ public class HouseInfoUI extends JDialog {
         IsLandUI.currentTextField.setText(IsLandUI.currentHouse.getName());
         IsLandUI.currentTextField.setVisible(true);
         IsLandUI.currentLabel.setVisible(true);
-       
         this.dispose();
 
     }
@@ -481,7 +482,6 @@ public class HouseInfoUI extends JDialog {
         setUndecorated(true);
         this.setBackground(new Color(0, 0, 0, 0));
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
-        //pnTranparent.setOpaque(false);
         this.setLocationRelativeTo(null);
         this.setModal(true);
         this.setVisible(true);
