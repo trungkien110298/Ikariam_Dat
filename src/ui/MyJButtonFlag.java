@@ -18,13 +18,13 @@ import javax.swing.border.BevelBorder;
 public class MyJButtonFlag extends JButton {
 
     public MyJButtonFlag() {
-        setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/flag.PNG")));
+        setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/flag-01.PNG")));
         setContentAreaFilled(false);
         setBorder(null);
         this.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseEntered(MouseEvent e) {
-                setBorder(BorderFactory.createBevelBorder(BevelBorder.RAISED));
+                //setBorder(BorderFactory.createBevelBorder(BevelBorder.RAISED));
             }
 
             public void mouseExited(MouseEvent e) {

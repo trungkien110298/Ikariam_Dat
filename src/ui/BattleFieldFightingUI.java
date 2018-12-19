@@ -32,7 +32,7 @@ public class BattleFieldFightingUI extends JDialog{
     
     JPanel pnMain, pnTitle, pnButton, pnContent;
     JLabel lblImg, lblTitle, lblImgTitle;
-    //JTextField forgeAttack;
+    
     JButton btnDispose,btnForge,btnColossus;
     PnBattleFieldFighting pnAttack, pnDefence;
     BattleFieldFighting battleFieldFighting; 
