@@ -11,6 +11,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
+import java.io.Serializable;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -25,7 +26,8 @@ import model.House;
  *
  * @author Dat Ngo
  */
-public class IsLandUI extends JFrame{
+public class IsLandUI extends JFrame implements Serializable{
+	
     JButton btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btn10, btn11, btn12, btn13, btn14, btn15, btn16, btn17;
     JButton btnWaveAttack, btnMenuSetting;
     JTextField txt1, txt2, txt3, txt4, txt5, txt6, txt7, txt8, txt9, txt10, txt11, txt12, txt13, txt14, txt15, txt16, txt17;
@@ -60,10 +62,7 @@ public class IsLandUI extends JFrame{
         addControls();
         addEvents();
     }
-    
-    public static void resetIsLand() {
-    	
-    }
+ 
     
     public void addControls(){
         Container con = getContentPane();
