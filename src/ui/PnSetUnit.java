@@ -81,8 +81,8 @@ public class PnSetUnit extends JPanel{
                 }
                 if(intValue < 0)
                     txt.setText("0");
-                else if(intValue >= 1000)
-                    txt.setText("999");
+                else if(intValue >= 2000)
+                    txt.setText("2000");
                 
                 sld.setValue(Integer.valueOf(txt.getText()));
             }
