@@ -82,10 +82,10 @@ public class IsLandUI extends JFrame{
         // Tạo UI 17 vị trí để đặt nhà
         
         btn1 = new MyJButtonFlag();
-        btn1.setBounds(175, 150, 70, 70);
+        btn1.setBounds(155, 120, 70, 70);
         txt1 = new JTextField();
-        txt1.setBounds(165, 180, 50, 12);
-        txt1.setFont(new Font(Font.SERIF, Font.BOLD, 10));
+        txt1.setBounds(160, 190, 60, 15);
+        txt1.setFont(new Font(Font.SERIF, Font.BOLD, 12));
         txt1.setEditable(true);
         txt1.setVisible(false);
         txt1.setDocument(new JTextFieldLimit(20));
@@ -95,10 +95,10 @@ public class IsLandUI extends JFrame{
         pnMain.add(txt1);
         
         btn2 = new MyJButtonFlag();
-        btn2.setBounds(360, 120, 70, 70);
+        btn2.setBounds(340, 95, 70, 70);
         txt2 = new JTextField();
-        txt2.setBounds(350, 150, 50, 12);
-        txt2.setFont(new Font(Font.SERIF, Font.BOLD, 10));
+        txt2.setBounds(345, 165, 60, 15);
+        txt2.setFont(new Font(Font.SERIF, Font.BOLD, 12));
         txt2.setEditable(true);
         txt2.setVisible(false);
         txt2.setDocument(new JTextFieldLimit(20));
@@ -108,10 +108,10 @@ public class IsLandUI extends JFrame{
         pnMain.add(btn2);
         
         btn3 = new MyJButtonFlag();
-        btn3.setBounds(500, 190, 70, 70);
+        btn3.setBounds(480, 160, 70, 70);
         txt3 = new JTextField();
-        txt3.setBounds(490, 220, 50, 12);
-        txt3.setFont(new Font(Font.SERIF, Font.BOLD, 10));
+        txt3.setBounds(485, 230, 60, 15);
+        txt3.setFont(new Font(Font.SERIF, Font.BOLD, 12));
         txt3.setEditable(true);
         txt3.setVisible(false);
         txt3.setDocument(new JTextFieldLimit(20));
@@ -121,10 +121,10 @@ public class IsLandUI extends JFrame{
         pnMain.add(btn3);
         
         btn4 = new MyJButtonFlag();
-        btn4.setBounds(820, 120, 70, 70);
+        btn4.setBounds(800, 90, 70, 70);
         txt4 = new JTextField();
-        txt4.setBounds(810, 150, 50, 12);
-        txt4.setFont(new Font(Font.SERIF, Font.BOLD, 10));
+        txt4.setBounds(805, 160, 60, 15);
+        txt4.setFont(new Font(Font.SERIF, Font.BOLD, 12));
         txt4.setEditable(true);
         txt4.setVisible(false);
         txt4.setDocument(new JTextFieldLimit(20));
@@ -134,10 +134,10 @@ public class IsLandUI extends JFrame{
         pnMain.add(btn4);
         
         btn5 = new MyJButtonFlag();
-        btn5.setBounds(910, 240, 70, 70);
+        btn5.setBounds(890, 220, 70, 70);
         txt5 = new JTextField();
-        txt5.setBounds(900, 270, 50, 12);
-        txt5.setFont(new Font(Font.SERIF, Font.BOLD, 10));
+        txt5.setBounds(895, 290, 60, 15);
+        txt5.setFont(new Font(Font.SERIF, Font.BOLD, 12));
         txt5.setEditable(true);
         txt5.setVisible(false);
         txt5.setDocument(new JTextFieldLimit(20));
@@ -147,10 +147,10 @@ public class IsLandUI extends JFrame{
         pnMain.add(btn5);
         
         btn6 = new MyJButtonFlag();
-        btn6.setBounds(1110, 260, 70, 70);
+        btn6.setBounds(1090, 240, 70, 70);
         txt6 = new JTextField();
-        txt6.setBounds(1100, 290, 50, 12);
-        txt6.setFont(new Font(Font.SERIF, Font.BOLD, 10));
+        txt6.setBounds(1095, 310, 60, 15);
+        txt6.setFont(new Font(Font.SERIF, Font.BOLD, 12));
         txt6.setEditable(true);
         txt6.setVisible(false);
         txt6.setDocument(new JTextFieldLimit(20));
@@ -160,10 +160,10 @@ public class IsLandUI extends JFrame{
         pnMain.add(btn6);
         
         btn7 = new MyJButtonFlag();
-        btn7.setBounds(1220, 350, 70, 70);
+        btn7.setBounds(1200, 330, 70, 70);
         txt7 = new JTextField();
-        txt7.setBounds(1210, 380, 50, 12);
-        txt7.setFont(new Font(Font.SERIF, Font.BOLD, 10));
+        txt7.setBounds(1205, 400, 60, 15);
+        txt7.setFont(new Font(Font.SERIF, Font.BOLD, 12));
         txt7.setEditable(true);
         txt7.setVisible(false);
         txt7.setDocument(new JTextFieldLimit(20));
@@ -173,10 +173,10 @@ public class IsLandUI extends JFrame{
         pnMain.add(btn7);
         
         btn8 = new MyJButtonFlag();
-        btn8.setBounds(1200, 475, 70, 70);
+        btn8.setBounds(1180, 455, 70, 70);
         txt8 = new JTextField();
-        txt8.setBounds(1190, 505, 50, 12);
-        txt8.setFont(new Font(Font.SERIF, Font.BOLD, 10));
+        txt8.setBounds(1185, 525, 60, 15);
+        txt8.setFont(new Font(Font.SERIF, Font.BOLD, 12));
         txt8.setEditable(true);
         txt8.setVisible(false);
         txt8.setDocument(new JTextFieldLimit(20));
@@ -186,10 +186,10 @@ public class IsLandUI extends JFrame{
         pnMain.add(btn8);
         
         btn9 = new MyJButtonFlag();
-        btn9.setBounds(1070, 550, 70, 70);
+        btn9.setBounds(1050, 530, 70, 70);
         txt9 = new JTextField();
-        txt9.setBounds(1060, 580, 50, 12);
-        txt9.setFont(new Font(Font.SERIF, Font.BOLD, 10));
+        txt9.setBounds(1055,600, 60, 15);
+        txt9.setFont(new Font(Font.SERIF, Font.BOLD, 12));
         txt9.setEditable(true);
         txt9.setVisible(false);
         txt9.setDocument(new JTextFieldLimit(20));
@@ -199,10 +199,10 @@ public class IsLandUI extends JFrame{
         pnMain.add(btn9);
         
         btn10 = new MyJButtonFlag();
-        btn10.setBounds(910, 590, 70, 70);
+        btn10.setBounds(890, 570, 70, 70);
         txt10 = new JTextField();
-        txt10.setBounds(900, 620, 50, 12);
-        txt10.setFont(new Font(Font.SERIF, Font.BOLD, 10));
+        txt10.setBounds(895, 640, 60, 15);
+        txt10.setFont(new Font(Font.SERIF, Font.BOLD, 12));
         txt10.setEditable(true);
         txt10.setVisible(false);
         txt10.setDocument(new JTextFieldLimit(20));
@@ -212,10 +212,10 @@ public class IsLandUI extends JFrame{
         pnMain.add(btn10);
         
         btn11 = new MyJButtonFlag();
-        btn11.setBounds(740, 670, 70, 70);
+        btn11.setBounds(720, 650, 70, 70);
         txt11 = new JTextField();
-        txt11.setBounds(730, 700, 50, 12);
-        txt11.setFont(new Font(Font.SERIF, Font.BOLD, 10));
+        txt11.setBounds(725, 720, 60, 15);
+        txt11.setFont(new Font(Font.SERIF, Font.BOLD, 12));
         txt11.setEditable(true);
         txt11.setVisible(false);
         txt11.setDocument(new JTextFieldLimit(20));
@@ -225,10 +225,10 @@ public class IsLandUI extends JFrame{
         pnMain.add(btn11);
         
         btn12 = new MyJButtonFlag();
-        btn12.setBounds(550, 600, 70, 70);
+        btn12.setBounds(530, 580, 70, 70);
         txt12 = new JTextField();
-        txt12.setBounds(540, 630, 50, 12);
-        txt12.setFont(new Font(Font.SERIF, Font.BOLD, 10));
+        txt12.setBounds(535, 650, 60, 15);
+        txt12.setFont(new Font(Font.SERIF, Font.BOLD, 12));
         txt12.setEditable(true);
         txt12.setVisible(false);
         txt12.setDocument(new JTextFieldLimit(20));
@@ -238,10 +238,10 @@ public class IsLandUI extends JFrame{
         pnMain.add(btn12);
         
         btn13 = new MyJButtonFlag();
-        btn13.setBounds(455, 490, 70, 70);
+        btn13.setBounds(435, 470, 70, 70);
         txt13 = new JTextField();
-        txt13.setBounds(445, 520, 50, 12);
-        txt13.setFont(new Font(Font.SERIF, Font.BOLD, 10));
+        txt13.setBounds(440, 540, 60, 15);
+        txt13.setFont(new Font(Font.SERIF, Font.BOLD, 12));
         txt13.setEditable(true);
         txt13.setVisible(false);
         txt13.setDocument(new JTextFieldLimit(20));
@@ -251,11 +251,10 @@ public class IsLandUI extends JFrame{
         pnMain.add(btn13);
         
         btn14 = new MyJButtonFlag();
-        btn14.setBounds(275, 550, 70, 70);
-        
+        btn14.setBounds(255, 530, 70, 70);
         txt14 = new JTextField();
-        txt14.setBounds(265, 580, 50, 12);
-        txt14.setFont(new Font(Font.SERIF, Font.BOLD, 10));
+        txt14.setBounds(260, 600, 60, 15);
+        txt14.setFont(new Font(Font.SERIF, Font.BOLD, 12));
         txt14.setEditable(true);
         txt14.setVisible(false);
         txt14.setDocument(new JTextFieldLimit(20));
@@ -265,10 +264,10 @@ public class IsLandUI extends JFrame{
         pnMain.add(btn14);
         
         btn15 = new MyJButtonFlag();
-        btn15.setBounds(200, 450, 70, 70);
+        btn15.setBounds(180, 430, 70, 70);
         txt15 = new JTextField();
-        txt15.setBounds(190, 480, 50, 12);
-        txt15.setFont(new Font(Font.SERIF, Font.BOLD, 10));
+        txt15.setBounds(185, 500, 60, 15);
+        txt15.setFont(new Font(Font.SERIF, Font.BOLD, 12));
         txt15.setEditable(true);
         txt15.setVisible(false);
         txt15.setDocument(new JTextFieldLimit(20));
@@ -278,10 +277,10 @@ public class IsLandUI extends JFrame{
         pnMain.add(btn15);
         
         btn16 = new MyJButtonFlag();
-        btn16.setBounds(350, 335, 70, 70);
+        btn16.setBounds(330, 315, 70, 70);
         txt16 = new JTextField();
-        txt16.setBounds(340, 365, 50, 12);
-        txt16.setFont(new Font(Font.SERIF, Font.BOLD, 10));
+        txt16.setBounds(335, 385, 60, 15);
+        txt16.setFont(new Font(Font.SERIF, Font.BOLD, 12));
         txt16.setEditable(true);
         txt16.setVisible(false);
         txt16.setDocument(new JTextFieldLimit(20));
@@ -293,8 +292,8 @@ public class IsLandUI extends JFrame{
         btn17 = new MyJButtonFlag();
         btn17.setBounds(180, 230, 70, 70);
         txt17 = new JTextField();
-        txt17.setBounds(180, 300, 60, 15);
-        txt17.setFont(new Font(Font.SERIF, Font.BOLD, 10));
+        txt17.setBounds(185, 300, 60, 15);
+        txt17.setFont(new Font(Font.SERIF, Font.BOLD, 12));
         txt17.setEditable(true);
         txt17.setVisible(false);
         txt17.setDocument(new JTextFieldLimit(20));
